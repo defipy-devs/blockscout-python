@@ -1,10 +1,8 @@
 # blockscout-python
 
-Python API for [blockscout.com](https://www.blockscout.com/). 
+Python API for [blockscout.com](https://www.blockscout.com/) available on [PyPI](https://pypi.org/project/blockscout-python/)
 
-All standard and pro endpoints are provided. Kovan, Rinkeby and Ropsten testnets are also supported.
-
-Available on [PyPI](https://pypi.org/project/blockscout-python/)
+Currently building and testing out on Rollux ...
 
 ___
 
