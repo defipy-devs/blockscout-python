@@ -35,6 +35,7 @@ pip install blockscout-python
 
 ``` python
 from blockscout import Blockscout
+from blockscout import Net
 eth = Blockscout(Net.ROLLUX) # key in quotation marks
 ```
 Then you can call all available methods, e.g.:
