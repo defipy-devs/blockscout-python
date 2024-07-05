@@ -1,6 +1,6 @@
 # blockscout-python
 
-Python API for [blockscout.com](https://www.blockscout.com/) available on [PyPI](https://pypi.org/project/blockscout-python/)
+Python API for [blockscout.com](https://www.blockscout.com/) 
 
 Currently building and testing out on Rollux ...
 
