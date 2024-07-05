@@ -3,18 +3,26 @@ from setuptools import setup
 with open('README.md') as f:
     long_description = f.read()
 
-setup(name='blockscout-python',
-      version='0.0.1',
-      description='blockscout-python',
-      long_description=long_description,
-      long_description_content_type="text/markdown",
-      url='http://github.com/icmoore/defipi',
-      author = "icmoore",
-      author_email = "defipy.devs@gmail.com",
-      license='MIT',
-      package_dir = {"blockscout-python": "python/prod"},
-      packages=[
-          'blockscout-python',
-          'blockscout-python.erc'
-      ],   
-      zip_safe=False)
+setup(
+    name="blockscout-python",
+    version="0.0.2",
+    description="Python API for blockscout explorers",
+    long_description=long_description,
+    long_description_content_type="text/markdown",    
+    url="https://github.com/defipy-devs",
+    author="icmoore",
+    author_email="defipy.devs@gmail.com",
+    license="MIT",
+    package_dir = {"blockscout": "python/prod"},
+    packages=[
+        "blockscout",
+        "blockscout.explorer",
+        "blockscout.configs",
+        "blockscout.enums",
+        "blockscout.modules",
+        "blockscout.utils",
+    ],
+    install_requires=["requests"],
+    include_package_data=True,
+    zip_safe=False,
+)

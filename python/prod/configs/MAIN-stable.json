@@ -1,0 +1,6 @@
+{
+    "get_addresses": {
+        "module": "accounts",
+        "kwargs": {}
+      }
+}

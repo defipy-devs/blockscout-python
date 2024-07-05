@@ -1,0 +1,10 @@
+{
+  "method": "get_block_number_by_timestamp",
+  "module": "blocks",
+  "kwargs": {
+    "timestamp": "1578638524",
+    "closest": "before"
+  },
+  "log_timestamp": "2020-10-28-12:34:44",
+  "res": "9251482"
+}

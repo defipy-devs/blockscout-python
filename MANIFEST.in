@@ -1,0 +1,2 @@
+include python/prod/configs/MAIN-stable.json
+include python/prod/configs/ROLLUX-stable.json
