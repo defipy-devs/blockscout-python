@@ -2,5 +2,11 @@
     "get_addresses": {
         "module": "accounts",
         "kwargs": {}
-      }
+      },
+      "get_address_balance": {
+        "module": "accounts",
+        "kwargs": {
+          "address": "0xBb8b9456F615545c88528653024E87C6069d1598"         
+        }
+    }  
 }

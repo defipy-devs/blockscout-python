@@ -2,5 +2,70 @@
     "get_addresses": {
         "module": "accounts",
         "kwargs": {}
+    },
+    "get_balance": {
+        "module": "accounts",
+        "kwargs": {
+          "address": "0xBb8b9456F615545c88528653024E87C6069d1598"         
+        }
+    },
+    "get_balance_multiple": {
+      "module": "accounts",
+      "kwargs": {
+        "addresses": [
+          "0xBb8b9456F615545c88528653024E87C6069d1598",
+          "0xc84633Af14e43F00D5aaa7A47B8d0864eE6a46FB"
+        ]
       }
+    },   
+    "get_pending_txs_by_address_paginated": {
+      "module": "accounts",
+      "action": "balance",
+      "address": "0xBb8b9456F615545c88528653024E87C6069d1598",
+      "page": "1",
+      "offset": "1"
+    },      
+    "get_txs_by_address_paginated": {
+      "module": "accounts",
+      "action": "txlist",
+      "address": "0xBb8b9456F615545c88528653024E87C6069d1598",
+      "startblock": "16550000",
+      "endblock": "116555563",
+      "page": "1",
+      "offset": "1",
+      "sort": "asc"
+    },
+    "get_erc20_token_transfer_events_by_address": {
+      "module": "accounts",
+      "action": "tokentx",
+      "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd",
+      "page": "1",
+      "offset": "1",
+      "sort": "asc"
+    },     
+    "get_erc721_token_transfer_events_by_address": {
+      "module": "accounts",
+      "action": "tokennfttx",
+      "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd",
+      "page": "1",
+      "offset": "1",
+      "sort": "asc"
+    },       
+    "get_erc20_balance_by_contract_address": {
+      "module": "accounts",
+      "action": "tokenbalance",
+      "contractaddress": "0x381E0bD1FE2e90707fA0e72880d8756f73e11084",
+      "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"
+    },       
+    "get_erc20_tokens_by_address": {
+      "module": "accounts",
+      "action": "tokenlist",
+      "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"
+    },  
+    "get_account_list_balances": {
+      "module": "accounts",
+      "action": "tokenlist",
+      "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"
+    }      
+
 }

@@ -2,6 +2,7 @@ from .explorer.etherscan import Etherscan
 from .explorer.blockscout import Blockscout
 from .enums.explorers_enum import ExplorersEnum as Explorer
 from .enums.nets_enum import NetsEnum as Net
+from .enums.api_enum import APIEnum as API
 from .modules.accounts import Accounts as accounts
 from .modules.blocks import Blocks as blocks
 from .modules.contracts import Contracts as contracts

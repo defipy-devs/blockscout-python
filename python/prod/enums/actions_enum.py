@@ -3,9 +3,17 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class ActionsEnum:
-    BALANCE_HISTORY: str = "balancehistory"
     BALANCE_MULTI: str = "balancemulti"
     BALANCE: str = "balance"
+    PENDING_TX_LIST: str = "pendingtxlist"
+    TX_LIST: str = "txlist"
+    TOKEN_TX: str = "tokentx"
+    TOKEN_NFT_TX: str = "tokennfttx"
+    TOKEN_BALANCE: str = "tokenbalance"
+    TOKEN_LIST: str = "tokenlist"   
+    LIST_ACCOUNTS: str = "listaccounts" 
+    
+    BALANCE_HISTORY: str = "balancehistory"
     CHAIN_SIZE: str = "chainsize"
     DAILY_AVG_BLOCK_SIZE: str = "dailyavgblocksize"
     DAILY_AVG_BLOCK_TIME: str = "dailyavgblocktime"
@@ -53,11 +61,8 @@ class ActionsEnum:
     GET_STATUS: str = "getstatus"
     GET_TX_RECEIPT_STATUS: str = "gettxreceiptstatus"
     TOKEN_BALANCE_HISTORY: str = "tokenbalancehistory"
-    TOKEN_BALANCE: str = "tokenbalance"
     TOKEN_INFO: str = "tokeninfo"
     TOKEN_SUPPLY_HISTORY: str = "tokensupplyhistory"
     TOKEN_SUPPLY: str = "tokensupply"
-    TOKENNFTTX: str = "tokennfttx"
-    TOKENTX: str = "tokentx"
+
     TXLIST_INTERNAL: str = "txlistinternal"
-    TXLIST: str = "txlist"

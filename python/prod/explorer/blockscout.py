@@ -5,15 +5,16 @@ import requests
 
 import blockscout
 from .. import configs
-from ..enums.fields_enum import FieldsEnum as fields
+from ..enums.fields_enum import FieldsEnum as Fields
 from ..enums.explorers_enum import ExplorersEnum as Explorers
+from ..enums.api_enum import APIEnum as API
 from ..utils.parsing import ResponseParser as parser
 
 class Blockscout:
-    def __new__(cls, net: str = "main"):
+    def __new__(cls, net: str = Explorers.ROLLUX, api: str = API.RPC):
         with resources.path(configs, f"{net.upper()}-stable.json") as path:
             config_path = str(path)
-        return cls.from_config(config_path=config_path, net=net)
+        return cls.from_config(config_path=config_path, net=net, api=api)
 
     @staticmethod
     def __load_config(config_path: str) -> dict:
@@ -21,13 +22,14 @@ class Blockscout:
             return json.load(f)
 
     @staticmethod
-    def __run(func, net: str):
+    def __run(func, net: str, api: str):
         
         def wrapper(*args, **kwargs):
             explorer = Explorers().get_explorer(net)
             url = (
-                f"{fields.HTTPS}"
+                f"{Fields.HTTPS}"
                 f"{explorer}"
+                f"{api}"
                 f"{func(*args, **kwargs)}"
             )
             print(f'url: {url}')
@@ -37,11 +39,10 @@ class Blockscout:
         return wrapper    
 
     @classmethod
-    def from_config(cls, config_path: str, net: str):
-        print(config_path)
+    def from_config(cls, config_path: str, net: str, api: str):
         config = cls.__load_config(config_path)
         for func, v in config.items():
             if not func.startswith("_"):  # disabled if _
                 attr = getattr(getattr(blockscout, v["module"]), func)
-                setattr(cls, func, cls.__run(attr, net))
+                setattr(cls, func, cls.__run(attr, net, api))
         return cls

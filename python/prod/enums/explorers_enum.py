@@ -5,9 +5,9 @@ DEFAULT_NET = NetsEnum.ROLLUX
 
 @dataclass(frozen=True)
 class ExplorersEnum:
-    ROLLUX: str = "explorer.rollux.com/api/v2/"
-    MAIN: str = "eth.blockscout.com/api/v2/"
-    GOERLI: str = "eth-goerli.blockscout.com/api/v2/"
+    ROLLUX: str = "explorer.rollux.com/"
+    MAIN: str = "eth.blockscout.com/"
+    GOERLI: str = "eth-goerli.blockscout.com/"
 
     def get_explorer(self, net = DEFAULT_NET) -> str:
              

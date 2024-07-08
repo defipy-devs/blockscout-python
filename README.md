@@ -10,10 +10,17 @@ ___
 
 The following endpoints are provided:
 
-<details><summary>Accounts <a href="https://eth.blockscout.com/api-docs">(source)</a></summary>
+<details><summary>Accounts <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/account">(source)</a></summary>
 <p>
 
-* `get_addresses`
+* `get_balance`
+* `get_pending_txs_by_address_paginated`
+* `get_txs_by_address_paginated`
+* `get_erc20_token_transfer_events_by_address`
+* `get_erc721_token_transfer_events_by_address`
+* `get_erc20_balance_by_contract_address`
+* `get_erc20_tokens_by_address`
+* `get_account_list_balances`
 
 </details>
 
@@ -36,26 +43,14 @@ pip install blockscout-python
 ``` python
 from blockscout import Blockscout
 from blockscout import Net
-eth = Blockscout(Net.ROLLUX) # key in quotation marks
+eth = Blockscout(Net.ROLLUX, API.RPC)  # key in quotation marks
 ```
 Then you can call all available methods, e.g.:
 
 ``` python
-eth.get_addresses()
+eth.get_balance(address="0xBb8b9456F615545c88528653024E87C6069d1598")
 
-> {'exchange_rate': None,
- 'items': [{'coin_balance': '3562345790348679629254255',
-   'tx_count': '0',
-   'ens_domain_name': None,
-   'hash': '0x4200000000000000000000000000000000000016',
-   'implementation_name': 'L2ToL1MessagePasser',
-   'is_contract': True,
-   'is_verified': True,
-   'metadata': None,
-   'name': 'Proxy',
-   'private_tags': [],
-   'public_tags': [],
-   'watchlist_names': []}, ... }
+> {'message': 'OK', 'result': '2010991698475838058402243', 'status': '1'}
 ```
 
 * See [test notebook](https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/basic.ipynb) for basic usage
