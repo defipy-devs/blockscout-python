@@ -24,6 +24,47 @@ The following endpoints are provided:
 
 </details>
 
+<details><summary>Block <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/block">(source)</a></summary>
+<p>
+
+* `get_block_reward_by_block_number`
+* `get_est_block_countdown_time_by_block_number`
+* `get_block_number_by_timestamp`
+
+</details>
+
+<details><summary>Contract <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/contract">(source)</a></summary>
+<p>
+
+* `get_contract_list`
+* `get_contract_abi`
+* `get_source_code`
+* `get_contract_creation`
+
+</details>
+
+<details><summary>Stats <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/stats">(source)</a></summary>
+<p>
+
+* `get_total_token_supply`
+* `get_total_eth_supply`
+* `get_total_coin_supply`
+* `get_eth_price`
+* `get_coin_price`
+
+</details>
+
+<details><summary>Tokens <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/token">(source)</a></summary>
+<p>
+
+* `get_total_supply_by_contract_address`
+* `get_total_holders_by_contract_address`
+* `get_tx_info`
+* `get_tx_receipt_status`
+* `get_status`
+
+</details>
+
 ## Installation
 
 Install from source:
