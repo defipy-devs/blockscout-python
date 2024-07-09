@@ -66,6 +66,40 @@
       "module": "accounts",
       "action": "tokenlist",
       "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"
-    }      
-
+    },      
+    "get_block_reward_by_block_number": {
+      "module": "blocks",
+      "action": "getblockreward",
+      "blockno": "1000000"
+    },
+    "get_est_block_countdown_time_by_block_number": {
+      "module": "blocks",
+      "action": "getblockreward",
+      "blockno": "1000000"
+    },
+    "get_total_token_supply": {
+      "module": "stats",
+      "action": "tokensupply",
+      "contractaddress": "0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c"
+    },    
+    "get_total_eth_supply": {
+      "module": "stats",
+      "action": "ethsupply",
+      "contractaddress": "0x3390108E913824B8eaD638444cc52B9aBdF63798"
+    },
+    "get_total_coin_supply": {
+      "module": "stats",
+      "action": "coinsupply",
+      "contractaddress": "0x3390108E913824B8eaD638444cc52B9aBdF63798"
+    },
+    "get_eth_price": {
+      "module": "stats",
+      "action": "ethprice",
+      "contractaddress": "0x3390108E913824B8eaD638444cc52B9aBdF63798"
+    },
+    "get_coin_price": {
+      "module": "stats",
+      "action": "coinprice",
+      "contractaddress": "0x3390108E913824B8eaD638444cc52B9aBdF63798"
+    }                         
 }
