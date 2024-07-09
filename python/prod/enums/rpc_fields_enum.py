@@ -5,6 +5,7 @@ class RPCFieldsEnum:
     ACTION: str = "&action="
     ADDRESS: str = "&address="
     CONTRACT_ADDRESS: str = "&contractaddress="
+    CONTRACT_ADDRESSES: str = "&contractaddresses="
     API_KEY: str = "&apikey="
     BLOCK_TYPE: str = "&blocktype="
     BLOCKNO: str = "&blockno="
