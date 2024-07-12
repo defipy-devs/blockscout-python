@@ -1,4 +1,3 @@
-from .explorer.etherscan import Etherscan
 from .explorer.blockscout import Blockscout
 from .enums.explorers_enum import ExplorersEnum as Explorer
 from .enums.nets_enum import NetsEnum as Net
@@ -14,9 +13,6 @@ from .modules.rest_stats import RESTStats as rest_stats
 from .modules.rpc_accounts import RPCAccounts as rpc_accounts
 from .modules.rpc_blocks import RPCBlocks as rpc_blocks
 from .modules.rpc_contracts import RPCContracts as rpc_contracts
-from .modules.gastracker import GasTracker as gastracker
-from .modules.pro import Pro as pro
-from .modules.proxy import Proxy as proxy
 from .modules.rpc_stats import RPCStats as rpc_stats
 from .modules.rpc_tokens import RPCTokens as rpc_tokens
 from .modules.rpc_transactions import RPCTransactions as rpc_transactions
