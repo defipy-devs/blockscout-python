@@ -1,6 +1,6 @@
 # blockscout-python
 
-Python API for [blockscout.com](https://www.blockscout.com/); currently tested on:
+Python API for [blockscout.com](https://www.blockscout.com/) as currently tested on:
 * [Rollux](https://explorer.rollux.com/)
 
 ___
