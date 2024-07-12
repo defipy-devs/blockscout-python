@@ -5,7 +5,7 @@ from blockscout.enums.modules_enum import ModulesEnum as Modules
 from blockscout.enums.tags_enum import TagsEnum as Tags
 
 
-class Tokens:
+class RPCTokens:
     
     @staticmethod
     def get_total_supply_by_contract_address(contractaddress: str) -> str:

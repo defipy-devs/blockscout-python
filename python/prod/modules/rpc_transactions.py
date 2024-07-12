@@ -4,7 +4,7 @@ from blockscout.enums.rest_fields_enum import RestFieldsEnum as RestFields
 from blockscout.enums.modules_enum import ModulesEnum as Modules
 from blockscout.enums.tags_enum import TagsEnum as Tags
 
-class Transactions:
+class RPCTransactions:
     
     @staticmethod
     def get_tx_info(txhash: str) -> str:

@@ -12,7 +12,13 @@ from ..utils.parsing import ResponseParser as parser
 
 class Blockscout:
     def __new__(cls, net: str = Explorers.ROLLUX, api: str = API.RPC):
-        with resources.path(configs, f"{net.upper()}-stable.json") as path:
+
+        if(api == API.RPC):
+            json_file_nm = f"{net.upper()}-RPC-stable.json"
+        elif(api == API.REST):
+            json_file_nm = f"{net.upper()}-REST-stable.json"
+        
+        with resources.path(configs, json_file_nm) as path:
             config_path = str(path)
         return cls.from_config(config_path=config_path, net=net, api=api)
 

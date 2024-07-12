@@ -1,2 +1,3 @@
-include python/prod/configs/MAIN-stable.json
-include python/prod/configs/ROLLUX-stable.json
+include python/prod/configs/MAIN-RPC-stable.json
+include python/prod/configs/ROLLUX-RPC-stable.json
+include python/prod/configs/ROLLUX-REST-stable.json

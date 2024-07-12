@@ -8,7 +8,7 @@ from blockscout.enums.modules_enum import ModulesEnum as Modules
 from blockscout.enums.tags_enum import TagsEnum as Tags
 
 
-class Contracts:
+class RPCContracts:
 
     @staticmethod
     def get_contract_list() -> str:

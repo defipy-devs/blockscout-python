@@ -8,14 +8,7 @@ from blockscout.enums.modules_enum import ModulesEnum as Modules
 from blockscout.enums.tags_enum import TagsEnum as Tags
 
 
-class Accounts:
-
-    @staticmethod
-    def get_addresses() -> str:
-        url = (
-            f"{RestFields.ADDRESSES}"
-        )
-        return url
+class RPCAccounts:
 
     @staticmethod
     def get_balance(address: str) -> str:

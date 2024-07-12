@@ -5,7 +5,7 @@ from blockscout.enums.modules_enum import ModulesEnum as Modules
 from blockscout.enums.tags_enum import TagsEnum as Tags
 
 
-class Blocks:
+class RPCBlocks:
     
     @staticmethod
     def get_block_reward_by_block_number(block_no: str) -> str:
