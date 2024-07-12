@@ -8,60 +8,81 @@ ___
 
 The following REST endpoints are provided:
 
-<details><summary>Accounts <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/account">(source)</a>
+<details><summary>Accounts <a href="https://explorer.rollux.com/api-docs">(source)</a>
 <a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/rest_account.ipynb">(test notebook)</a>
 </summary>
 <p>
 
-* `get_balance`
-* `get_pending_txs_by_address_paginated`
-* `get_txs_by_address_paginated`
-* `get_erc20_token_transfer_events_by_address`
-* `get_erc721_token_transfer_events_by_address`
-* `get_erc20_balance_by_contract_address`
-* `get_erc20_tokens_by_address`
-* `get_account_list_balances`
+* `get_addresses`
+* `get_address_info`
+* `get_address_counters`
+* `get_address_transactions`
+* `get_address_logs`
+* `get_blocks_validated`
+* `get_token_balances`
+* `get_token_balances_with_filtering`
+* `get_coin_balance_history`
+* `get_coin_balance_history_by_day`
 
 </details>
 
-<details><summary>Block <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/block">(source)</a></summary>
+<details><summary>Block <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/rest_blocks.ipynb">(test notebook)</a>
+</summary>
 <p>
 
-* `get_block_reward_by_block_number`
-* `get_est_block_countdown_time_by_block_number`
-* `get_block_number_by_timestamp`
+* `get_block_info`
+* `get_block_transactions`
+* `get_block_withdrawals`
+* `get_main_page_blocks`
 
 </details>
 
-<details><summary>Contract <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/contract">(source)</a></summary>
+<details><summary>Contract <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/rest_contracts.ipynb">(test notebook)</a>
+</summary>
 <p>
 
-* `get_contract_list`
-* `get_contract_abi`
-* `get_source_code`
-* `get_contract_creation`
+* `get_smart_contracts`
+* `get_smart_contract_counters`
+* `get_smart_contract`
 
 </details>
 
-<details><summary>Stats <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/stats">(source)</a></summary>
+<details><summary>Stats <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/rest_stats.ipynb">(test notebook)</a>
+</summary>
 <p>
 
-* `get_total_token_supply`
-* `get_total_eth_supply`
-* `get_total_coin_supply`
-* `get_eth_price`
-* `get_coin_price`
+* `get_stats_transactions_chart`
+* `get_stats_counters`
 
 </details>
 
-<details><summary>Tokens <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/token">(source)</a></summary>
+<details><summary>Tokens <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/rest_tokens.ipynb">(test notebook)</a>
+</summary>
 <p>
 
-* `get_total_supply_by_contract_address`
-* `get_total_holders_by_contract_address`
-* `get_tx_info`
-* `get_tx_receipt_status`
-* `get_status`
+* `get_tokens_list`
+* `get_token_info`
+* `get_token_transfers`
+* `get_token_holders`
+* `get_token_counters`
+
+</details>
+
+<details><summary>Transactions <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/rest_transaction.ipynb">(test notebook)</a>
+</summary>
+<p>
+
+* `get_state_changes`
+* `get_transaction_logs`
+* `get_internal_transactions`
+* `get_token_hash_transfers`
+* `get_transaction_info`
+* `get_main_page_transactions`
 
 </details>
 
@@ -85,7 +106,9 @@ The following RPC endpoints are provided:
 
 </details>
 
-<details><summary>Block <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/block">(source)</a></summary>
+<details><summary>Block <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/block">(source)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/rpc_block.ipynb">(test notebook)</a>
+</summary>
 <p>
 
 * `get_block_reward_by_block_number`
@@ -94,7 +117,9 @@ The following RPC endpoints are provided:
 
 </details>
 
-<details><summary>Contract <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/contract">(source)</a></summary>
+<details><summary>Contract <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/contract">(source)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/rpc_contract.ipynb">(test notebook)</a>
+</summary>
 <p>
 
 * `get_contract_list`
@@ -104,7 +129,9 @@ The following RPC endpoints are provided:
 
 </details>
 
-<details><summary>Stats <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/stats">(source)</a></summary>
+<details><summary>Stats <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/stats">(source)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/rpc_stats.ipynb">(test notebook)</a>
+</summary>
 <p>
 
 * `get_total_token_supply`
@@ -115,7 +142,9 @@ The following RPC endpoints are provided:
 
 </details>
 
-<details><summary>Tokens <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/token">(source)</a></summary>
+<details><summary>Tokens <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/token">(source)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/tutorials/rpc_tokens.ipynb">(test notebook)</a>
+</summary>
 <p>
 
 * `get_total_supply_by_contract_address`
