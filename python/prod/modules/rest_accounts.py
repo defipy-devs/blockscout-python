@@ -18,7 +18,6 @@ class RESTAccounts:
         )
         return url
 
-
     @staticmethod
     def get_address_info(address: str) -> str:
         url = (

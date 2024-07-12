@@ -7,6 +7,9 @@ from .enums.api_enum import APIEnum as API
 from .modules.rest_accounts import RESTAccounts as rest_accounts
 from .modules.rest_tokens import RESTTokens as rest_tokens
 from .modules.rest_contracts import RESTContracts as rest_contracts
+from .modules.rest_blocks import RESTBlocks as rest_blocks
+from .modules.rest_transactions import RESTTransactions as rest_transactions
+from .modules.rest_stats import RESTStats as rest_stats
 
 from .modules.rpc_accounts import RPCAccounts as rpc_accounts
 from .modules.rpc_blocks import RPCBlocks as rpc_blocks

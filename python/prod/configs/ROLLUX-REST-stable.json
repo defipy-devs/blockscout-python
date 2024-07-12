@@ -102,5 +102,69 @@
         "kwargs": {
             "address": "0x420000000000000000000000000000000000001A"         
           }
-    }               
+    },
+    "get_block_info": {
+        "module": "rest_blocks",
+        "kwargs": {
+            "block_number": "16668506"         
+          }
+    },
+    "get_block_transactions": {
+        "module": "rest_blocks",
+        "kwargs": {
+            "block_number": "16668506"         
+          }
+    },
+    "get_block_withdrawals": {
+        "module": "rest_blocks",
+        "kwargs": {
+            "block_number": "16668506"         
+          }
+    },
+    "get_main_page_blocks": {
+        "module": "rest_blocks",
+        "kwargs": {}
+    },    
+    "get_state_changes": {
+        "module": "rest_transactions",
+        "kwargs": {
+            "tx_hash": "0x8d3a232721f4442bcb369909f71c9bf313a1511d4dbc58d2bf61a36cdbc969dc"         
+          }
+    },
+    "get_transaction_logs": {
+        "module": "rest_transactions",
+        "kwargs": {
+            "tx_hash": "0x8d3a232721f4442bcb369909f71c9bf313a1511d4dbc58d2bf61a36cdbc969dc"         
+          }
+    },
+    "get_internal_transactions": {
+        "module": "rest_transactions",
+        "kwargs": {
+            "tx_hash": "0x8d3a232721f4442bcb369909f71c9bf313a1511d4dbc58d2bf61a36cdbc969dc"         
+          }
+    },
+    "get_token_hash_transfers": {
+        "module": "rest_transactions",
+        "kwargs": {
+            "tx_hash": "0x8d3a232721f4442bcb369909f71c9bf313a1511d4dbc58d2bf61a36cdbc969dc"         
+          }
+    },
+    "get_transaction_info": {
+        "module": "rest_transactions",
+        "kwargs": {
+            "tx_hash": "0xa4aecf951731a6a3f470b72184eed54a9dabe204f5bd0ce4a12a4c259e13de6b"         
+          }
+    },
+    "get_main_page_transactions": {
+        "module": "rest_transactions",
+        "kwargs": {}
+    },
+    "get_stats_transactions_chart": {
+        "module": "rest_stats",
+        "kwargs": {}
+    },
+    "get_stats_counters": {
+        "module": "rest_stats",
+        "kwargs": {}
+    }                                                                         
 }    
