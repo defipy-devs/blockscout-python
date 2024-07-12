@@ -9,7 +9,7 @@ ___
 
 The following REST endpoints are provided:
 
-<details><summary>Accounts <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<details><summary>Accounts <a href="https://eth.blockscout.com/api-docs">(source)</a>
 <a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_account.ipynb">(test notebook)</a>
 </summary>
 <p>
@@ -27,7 +27,7 @@ The following REST endpoints are provided:
 
 </details>
 
-<details><summary>Block <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<details><summary>Block <a href="https://eth.blockscout.com/api-docs">(source)</a>
 <a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_blocks.ipynb">(test notebook)</a>
 </summary>
 <p>
@@ -39,7 +39,7 @@ The following REST endpoints are provided:
 
 </details>
 
-<details><summary>Contract <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<details><summary>Contract <a href="https://eth.blockscout.com/api-docs">(source)</a>
 <a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_contracts.ipynb">(test notebook)</a>
 </summary>
 <p>
@@ -50,7 +50,7 @@ The following REST endpoints are provided:
 
 </details>
 
-<details><summary>Stats <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<details><summary>Stats <a href="https://eth.blockscout.com/api-docs">(source)</a>
 <a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_stats.ipynb">(test notebook)</a>
 </summary>
 <p>
@@ -60,7 +60,7 @@ The following REST endpoints are provided:
 
 </details>
 
-<details><summary>Tokens <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<details><summary>Tokens <a href="https://eth.blockscout.com/api-docs">(source)</a>
 <a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_tokens.ipynb">(test notebook)</a>
 </summary>
 <p>
@@ -73,7 +73,7 @@ The following REST endpoints are provided:
 
 </details>
 
-<details><summary>Transactions <a href="https://explorer.rollux.com/api-docs">(source)</a>
+<details><summary>Transactions <a href="https://eth.blockscout.com/api-docs">(source)</a>
 <a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_transactions.ipynb">(test notebook)</a>
 </summary>
 <p>
