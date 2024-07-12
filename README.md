@@ -74,7 +74,7 @@ The following REST endpoints are provided:
 </details>
 
 <details><summary>Transactions <a href="https://explorer.rollux.com/api-docs">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_transaction.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_transactions.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -119,7 +119,7 @@ The following RPC endpoints are provided:
 </details>
 
 <details><summary>Contract <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/contract">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rpc_contract.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rpc_contracts.ipynb">(test notebook)</a>
 </summary>
 <p>
 

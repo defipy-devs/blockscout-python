@@ -5,8 +5,8 @@ with open('README.md') as f:
 
 setup(
     name="blockscout-python",
-    version="0.0.2",
-    description="Python API for blockscout explorers",
+    version="0.0.3",
+    description="Python API for blockscout.com explorers",
     long_description=long_description,
     long_description_content_type="text/markdown",    
     url="https://github.com/defipy-devs",
