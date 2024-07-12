@@ -175,7 +175,7 @@ pip install blockscout-python
 ``` python
 from blockscout import Blockscout
 from blockscout import Net
-eth = Blockscout(Net.ROLLUX, API.RPC)  # key in quotation marks
+eth = Blockscout(Net.ROLLUX, API.RPC)  
 ```
 Then you can call all available methods, e.g.:
 
