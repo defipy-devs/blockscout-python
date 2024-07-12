@@ -26,3 +26,6 @@ class ActionsEnum:
     LIST_CONTRACTS: str = "listcontracts"
     GET_SOURCE_CODE: str = "getsourcecode"
     GET_CONTRACT_CREATION: str = "getcontractcreation"
+    GET_BLOCK_REWARD: str = "getblockreward"
+    GET_BLOCK_COUNTDOWN: str = "getblockcountdown"
+    GET_ABI: str = "getabi"

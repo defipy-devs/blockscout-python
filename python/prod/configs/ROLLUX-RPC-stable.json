@@ -1,8 +1,4 @@
 {
-    "get_addresses": {
-        "module": "rpc_accounts",
-        "kwargs": {}
-    },
     "get_balance": {
         "module": "rpc_accounts",
         "kwargs": {
