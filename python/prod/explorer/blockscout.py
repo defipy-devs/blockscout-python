@@ -11,8 +11,9 @@ from ..enums.api_enum import APIEnum as API
 from ..utils.parsing import ResponseParser as parser
 
 class Blockscout:
-    def __new__(cls, net: str = Explorers.ROLLUX, api: str = API.RPC):
-
+    def __new__(cls, net: str = Explorers.ROLLUX, api: str = API.RPC, verbose = False):
+        instance = super(Blockscout, cls).__new__(cls)
+        
         if(api == API.RPC):
             json_file_nm = f"{net.upper()}-RPC-stable.json"
         elif(api == API.REST):
@@ -21,6 +22,9 @@ class Blockscout:
         with resources.path(configs, json_file_nm) as path:
             config_path = str(path)
         return cls.from_config(config_path=config_path, net=net, api=api)
+
+    def __init__(self, verbose):
+        self.verbose = verbose 
 
     @staticmethod
     def __load_config(config_path: str) -> dict:
