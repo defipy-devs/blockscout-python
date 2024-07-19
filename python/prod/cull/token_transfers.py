@@ -1,0 +1,110 @@
+from ..explorer.blockscout import Blockscout 
+from ..enums.explorers_enum import ExplorersEnum as Explorers
+from ..enums.nets_enum import NetsEnum as Net
+from ..enums.api_enum import APIEnum as API
+
+from datetime import datetime
+import pandas as pd
+
+class TokenTransfers:
+
+    def __init__(self, net: str = Net.ROLLUX, verbose: bool = False):
+        self.net_rpc = Blockscout(net, API.RPC)  
+        self.net_rest = Blockscout(net, API.REST) 
+        self.tkn_balances = {} 
+        self.verbose = verbose  
+
+    def apply(self, tkn_addr):
+        tkn_transfers = self.pull_data(tkn_addr)
+        dict_transfers = self.to_dict(tkn_addr, tkn_transfers)
+        dict_transfers = self.sort_dict(dict_transfers, 'blk_num', ascending = False)
+        dict_transfers = self.add_tkn_balances(dict_transfers)
+        return dict_transfers
+
+    def get_tkn_timeseries(self, dict_transfers, tkn_symbol_nm, ascending = True):
+        filtered_dict = {k:v for k,v in dict_transfers.items() if 'tkn_symbol' in v and v['tkn_symbol'] == tkn_symbol_nm}
+        filtered_dict = self.sort_dict(filtered_dict, 'timestamp', ascending)
+        timestamps = [filtered_dict[ind]['timestamp'] for k, ind in enumerate(filtered_dict)]
+        coin_balances = [filtered_dict[ind]['tkn_coin_balance'] for k, ind in enumerate(filtered_dict)]
+        dates = [datetime.fromtimestamp(ts) for ts in timestamps]
+        return dates, coin_balances
+
+    def get_tkn_balances(self):
+        return self.tkn_balances
+
+    def to_dataframe(self, dict_transfers):
+        return pd.DataFrame.from_dict(dict_transfers, orient='index')    
+
+    def pull_data(self, tkn_addr, sort_direction = "desc"):
+        tkn_transfers = []
+        page_nm = 1
+        pull_tkn_transfers = True
+        while(pull_tkn_transfers):
+            erc20_tkn_transfers = self.net_rpc.get_erc20_token_transfer_events_by_address(address=tkn_addr, page=page_nm, offset=0, sort=sort_direction)
+            tkn_transfers.extend(erc20_tkn_transfers['result'])
+            pull_tkn_transfers = pull_tkn_transfers if len(erc20_tkn_transfers['result']) > 0 else False
+            page_nm+=1  
+
+        return tkn_transfers
+
+    def to_dict(self, tkn_addr, tkn_transfers):   
+        dict_transfers = {}
+        n_transfers = len(tkn_transfers)
+        for k in range(n_transfers):
+            tx = tkn_transfers[k]
+            dict_transfers[k] = {}
+            dict_transfers[k]['blk_num'] = int(tx['blockNumber'])
+            dict_transfers[k]['timestamp'] = int(tx['timeStamp'])
+            dict_transfers[k]['tkn_symbol'] = tx['tokenSymbol']
+            dict_transfers[k]['tkn_name'] = tx['tokenName']
+            dict_transfers[k]['tkn_decimal'] = int(tx['tokenDecimal'])
+            dict_transfers[k]['tkn_address'] = tx['contractAddress']
+            dict_transfers[k]['transfer_value'] = int(tx['value'])
+            transfer_value = dict_transfers[k]['transfer_value']
+            tkn_decimal = dict_transfers[k]['tkn_decimal']            
+            dict_transfers[k]['coin_value'] = transfer_value/(10**tkn_decimal)
+            dict_transfers[k]['transfer_in'] = tx['to'] == tkn_addr.lower()
+            dict_transfers[k]['transfer_gas'] = int(tx['gasUsed'])
+            dict_transfers[k]['transfer_hash'] = tx['hash']
+
+        return dict_transfers
+
+    def add_tkn_balances(self, dict_transfers):
+        tkn_balances = {}
+        N = len(dict_transfers)
+        for k in range(N, 0, -1):
+            tx = dict_transfers[k-1]
+            tkn_symbol = tx['tkn_symbol']
+            tkn_decimal = tx['tkn_decimal']
+            transfer_value = tx['transfer_value']
+            transfer_in = tx['transfer_in']
+        
+            self.tkn_balances[tkn_symbol] = {} if tkn_symbol not in self.tkn_balances else self.tkn_balances[tkn_symbol]
+            self.tkn_balances[tkn_symbol]['tkn_balance'] = 0 if 'tkn_balance' not in self.tkn_balances[tkn_symbol] else self.tkn_balances[tkn_symbol]['tkn_balance']
+        
+            if(transfer_in):
+                self.tkn_balances[tkn_symbol]['tkn_balance'] += transfer_value
+            elif self.tkn_balances[tkn_symbol]['tkn_balance'] >= transfer_value:     
+                self.tkn_balances[tkn_symbol]['tkn_balance'] -= transfer_value
+            else:
+                self.tkn_balances[tkn_symbol]['tkn_balance'] = 0
+            self.tkn_balances[tkn_symbol]['tkn_decimal'] = tkn_decimal
+            
+            dict_transfers[k-1]['tkn_balance'] = self.tkn_balances[tkn_symbol]['tkn_balance']
+            dict_transfers[k-1]['tkn_coin_balance'] = self.tkn_balances[tkn_symbol]['tkn_balance']/(10**tkn_decimal)
+
+        return dict_transfers
+
+
+    def sort_dict(self, dict_transfers, col_nm, ascending = False):
+        dict_transfers = dict(sorted(dict_transfers.items(), key=lambda item: item[1][col_nm], reverse= (not ascending)))
+        
+        dict_transfers_reindex = {}
+        for k, old_k in enumerate(dict_transfers):
+            dict_transfers_reindex[k] = dict_transfers[old_k]
+        dict_transfers = dict_transfers_reindex
+
+        return dict_transfers
+
+
+        
