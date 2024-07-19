@@ -170,7 +170,7 @@ Alternatively, install from [PyPI](https://pypi.org/project/etherscan-python/):
 pip install blockscout-python
 ```
 
-## Usage
+## Basic Usage
 
 ``` python
 from blockscout import Blockscout
@@ -184,6 +184,38 @@ eth.get_balance(address="0xBb8b9456F615545c88528653024E87C6069d1598")
 
 > {'message': 'OK', 'result': '2010991698475838058402243', 'status': '1'}
 ```
+
+## Token Adress Time Series
+
+* See [test notebook](https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/cull/address_tkn_transfers.ipynb) 
+for example
+
+Pull data for specified address
+```
+from blockscout import TokenTransfers
+from blockscout import Net
+
+addr = '0x8A4AA176007196D48d39C89402d3753c39AE64c1'
+tkn_trans = TokenTransfers(Net.ROLLUX)
+dict_transfers = tkn_trans.apply(addr)
+tkn_balances = tkn_trans.get_tkn_balances()
+```
+
+Plot token transfers
+```
+import matplotlib.pyplot as plt
+
+for tkn_symbol in tkn_balances.keys():
+    dates, tkn_coin_balances = tkn_trans.get_tkn_timeseries(dict_transfers, tkn_symbol)
+    fig, (TKN_ax) = plt.subplots(nrows=1, sharex=False, sharey=False, figsize=(16, 3))
+    TKN_ax.plot(dates, tkn_coin_balances, color = 'r',linestyle = 'dashdot', label=tkn_symbol) 
+    TKN_ax.set_ylabel(f'{tkn_symbol} Balance', size=14)
+    TKN_ax.set_xlabel('Date', size=14)
+
+fig.savefig('docs/img/addr_tkn_balances.jpg')
+```
+
+![plot](./docs/img/addr_tkn_balances.jpg)
 
 If you found this package helpful, please leave a :star:!
 

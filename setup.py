@@ -17,6 +17,7 @@ setup(
     packages=[
         "blockscout",
         "blockscout.explorer",
+        "blockscout.cull",
         "blockscout.configs",
         "blockscout.enums",
         "blockscout.modules",
