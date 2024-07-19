@@ -201,6 +201,13 @@ dict_transfers = tkn_trans.apply(addr)
 tkn_balances = tkn_trans.get_tkn_balances()
 ```
 
+#### OUTPUT:
+{'USDT': {'tkn_balance': 89590009236, 'tkn_decimal': 6}, <br/>
+ 'USDC': {'tkn_balance': 238003477125, 'tkn_decimal': 6}, <br/>
+ 'ETH': {'tkn_balance': 2689089808644384766235, 'tkn_decimal': 18}, <br/>
+ 'BTC': {'tkn_balance': 999799972, 'tkn_decimal': 8}, <br/>
+ 'WSYS': {'tkn_balance': 65787771636449164370510, 'tkn_decimal': 18}} <br/><br/> 
+
 Plot token transfers
 ```
 import matplotlib.pyplot as plt
@@ -211,8 +218,6 @@ for tkn_symbol in tkn_balances.keys():
     TKN_ax.plot(dates, tkn_coin_balances, color = 'r',linestyle = 'dashdot', label=tkn_symbol) 
     TKN_ax.set_ylabel(f'{tkn_symbol} Balance', size=14)
     TKN_ax.set_xlabel('Date', size=14)
-
-fig.savefig('docs/img/addr_tkn_balances.jpg')
 ```
 
 ![plot](./docs/img/addr_tkn_balances.jpg)
