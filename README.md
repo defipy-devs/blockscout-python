@@ -199,6 +199,7 @@ addr = '0x8A4AA176007196D48d39C89402d3753c39AE64c1'
 tkn_trans = TokenTransfers(Net.ROLLUX)
 dict_transfers = tkn_trans.apply(addr)
 tkn_balances = tkn_trans.get_tkn_balances()
+tkn_balances
 ```
 
 #### OUTPUT:
