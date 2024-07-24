@@ -15,6 +15,7 @@ DEFAULT_N_PULLS = 25
 class CoinTransfers:
 
     def __init__(self, net: str = Net.ROLLUX, verbose: bool = False):
+        self.net = net
         self.net_rpc = Blockscout(net, API.RPC)  
         self.net_rest = Blockscout(net, API.REST) 
         self.tkn_balances = {} 
@@ -55,12 +56,16 @@ class CoinTransfers:
 
         return coin_txs
 
+    def get_coin_dat(self):
+        explorer = Explorers(self.net)
+        return explorer.get_coin_dat()        
 
     def pull_coin_balances(self, tkn_addr, coin_txs):
 
-        native_tkn_symbol = 'SYS'
-        native_tkn_name = 'Syscoin'
-        native_tkn_decimal = 18
+        coin_dat = self.get_coin_dat()
+        native_tkn_symbol = coin_dat['coin_symbol']
+        native_tkn_name = coin_dat['coin_name']
+        native_tkn_decimal = coin_dat['coin_decimal']
 
         dict_transfers = {}
         dict_tx_state_changes = {}
