@@ -20,7 +20,6 @@ class TokenTransfers:
         dd_tx = DataDict(dict_transfers)
         dd_tx.sort_dict('blk_num')
         dict_transfers = dd_tx.get_data_dict()
-        #dict_transfers = self.sort_dict(dict_transfers, 'blk_num', ascending = False)
         dict_transfers = self.add_tkn_balances(dict_transfers)
         return dict_transfers
 
