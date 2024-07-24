@@ -53,22 +53,25 @@ class TokenTransfers:
     def to_dict(self, tkn_addr, tkn_transfers):   
         dict_transfers = {}
         n_transfers = len(tkn_transfers)
+        c = 0
         for k in range(n_transfers):
             tx = tkn_transfers[k]
-            dict_transfers[k] = {}
-            dict_transfers[k]['blk_num'] = int(tx['blockNumber'])
-            dict_transfers[k]['timestamp'] = int(tx['timeStamp'])
-            dict_transfers[k]['tkn_symbol'] = tx['tokenSymbol']
-            dict_transfers[k]['tkn_name'] = tx['tokenName']
-            dict_transfers[k]['tkn_decimal'] = int(tx['tokenDecimal'])
-            dict_transfers[k]['tkn_address'] = tx['contractAddress']
-            dict_transfers[k]['transfer_value'] = int(tx['value'])
-            transfer_value = dict_transfers[k]['transfer_value']
-            tkn_decimal = dict_transfers[k]['tkn_decimal']            
-            dict_transfers[k]['human_transfer_value'] = transfer_value/(10**tkn_decimal)
-            dict_transfers[k]['transfer_in'] = tx['to'] == tkn_addr.lower()
-            dict_transfers[k]['transfer_gas'] = int(tx['gasUsed'])
-            dict_transfers[k]['transfer_hash'] = tx['hash']
+            if('value' in tx):
+                dict_transfers[c] = {}
+                dict_transfers[c]['blk_num'] = int(tx['blockNumber'])
+                dict_transfers[c]['timestamp'] = int(tx['timeStamp'])
+                dict_transfers[c]['tkn_symbol'] = tx['tokenSymbol']
+                dict_transfers[c]['tkn_name'] = tx['tokenName']
+                dict_transfers[c]['tkn_decimal'] = int(tx['tokenDecimal'])
+                dict_transfers[c]['tkn_address'] = tx['contractAddress']
+                dict_transfers[c]['transfer_value'] = int(tx['value'])
+                transfer_value = dict_transfers[c]['transfer_value']
+                tkn_decimal = dict_transfers[c]['tkn_decimal']            
+                dict_transfers[c]['human_transfer_value'] = transfer_value/(10**tkn_decimal)
+                dict_transfers[c]['transfer_in'] = tx['to'] == tkn_addr.lower()
+                dict_transfers[c]['transfer_gas'] = int(tx['gasUsed'])
+                dict_transfers[c]['transfer_hash'] = tx['hash']
+                c+=1
 
         return dict_transfers
 
