@@ -5,7 +5,7 @@ with open('README.md') as f:
 
 setup(
     name="blockscout-python",
-    version="0.0.5",
+    version="0.1.0",
     description="Python API for blockscout.com explorers",
     long_description=long_description,
     long_description_content_type="text/markdown",    
