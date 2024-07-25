@@ -1,3 +1,10 @@
-include python/prod/configs/MAIN-RPC-stable.json
 include python/prod/configs/ROLLUX-RPC-stable.json
 include python/prod/configs/ROLLUX-REST-stable.json
+include python/prod/configs/ETHEREUM-RPC-stable.json
+include python/prod/configs/ETHEREUM-REST-stable.json
+include python/prod/configs/ARBITRUM-RPC-stable.json
+include python/prod/configs/ARBITRUM-REST-stable.json
+include python/prod/configs/OPTIMISM-RPC-stable.json
+include python/prod/configs/OPTIMISM-REST-stable.json
+include python/prod/configs/POLYGON-RPC-stable.json
+include python/prod/configs/POLYGON-REST-stable.json

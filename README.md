@@ -1,7 +1,11 @@
 # blockscout-python
 
 Python API for [blockscout.com](https://www.blockscout.com/) as currently tested on:
+* [Ethereum](https://eth.blockscout.com/)
 * [Rollux](https://explorer.rollux.com/)
+* [Arbitrum](https://arbitrum.blockscout.com/)
+* [Optimisim](https://optimism.blockscout.com/)
+* [Polygon](https://polygon.blockscout.com/)
 
 ___
 
@@ -10,7 +14,7 @@ ___
 The following REST endpoints are provided:
 
 <details><summary>Accounts <a href="https://eth.blockscout.com/api-docs">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_account.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rest_account.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -28,7 +32,7 @@ The following REST endpoints are provided:
 </details>
 
 <details><summary>Block <a href="https://eth.blockscout.com/api-docs">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_blocks.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rest_blocks.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -40,7 +44,7 @@ The following REST endpoints are provided:
 </details>
 
 <details><summary>Contract <a href="https://eth.blockscout.com/api-docs">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_contracts.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rest_contracts.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -51,7 +55,7 @@ The following REST endpoints are provided:
 </details>
 
 <details><summary>Stats <a href="https://eth.blockscout.com/api-docs">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_stats.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rest_stats.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -61,7 +65,7 @@ The following REST endpoints are provided:
 </details>
 
 <details><summary>Tokens <a href="https://eth.blockscout.com/api-docs">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_tokens.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rest_tokens.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -74,7 +78,7 @@ The following REST endpoints are provided:
 </details>
 
 <details><summary>Transactions <a href="https://eth.blockscout.com/api-docs">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rest_transactions.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rest_transactions.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -92,7 +96,7 @@ The following REST endpoints are provided:
 The following RPC endpoints are provided:
 
 <details><summary>Accounts <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/account">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rpc_account.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rpc_account.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -108,7 +112,7 @@ The following RPC endpoints are provided:
 </details>
 
 <details><summary>Block <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/block">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rpc_block.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rpc_block.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -119,7 +123,7 @@ The following RPC endpoints are provided:
 </details>
 
 <details><summary>Contract <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/contract">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rpc_contracts.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rpc_contracts.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -131,7 +135,7 @@ The following RPC endpoints are provided:
 </details>
 
 <details><summary>Stats <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/stats">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rpc_stats.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rpc_stats.ipynb">(test notebook)</a>
 </summary>
 <p>
 
@@ -144,7 +148,7 @@ The following RPC endpoints are provided:
 </details>
 
 <details><summary>Tokens <a href="https://docs.blockscout.com/for-users/api/rpc-endpoints/token">(source)</a>
-<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rpc_tokens.ipynb">(test notebook)</a>
+<a href="https://github.com/defipy-devs/blockscout-python/blob/main/notebooks/test/rollux/rpc_tokens.ipynb">(test notebook)</a>
 </summary>
 <p>
 

@@ -1,0 +1,193 @@
+{
+    "get_balance": {
+        "module": "rpc_accounts",
+        "kwargs": {
+          "address": "0xBb8b9456F615545c88528653024E87C6069d1598"         
+        }
+    },
+    "get_balance_multiple": {
+      "module": "rpc_accounts",
+      "kwargs": {
+        "addresses": [
+          "0xBb8b9456F615545c88528653024E87C6069d1598",
+          "0xc84633Af14e43F00D5aaa7A47B8d0864eE6a46FB"
+        ]
+      }
+    },   
+    "get_pending_txs_by_address_paginated": {
+      "module": "rpc_accounts",
+      "kwargs": {
+        "action": "balance",
+        "address": "0xBb8b9456F615545c88528653024E87C6069d1598",
+        "page": "1",
+        "offset": "1"        
+      }       
+    },      
+    "get_txs_by_address_paginated": {
+      "module": "rpc_accounts",
+      "action": "txlist",
+      "kwargs": {     
+        "address": "0xBb8b9456F615545c88528653024E87C6069d1598",
+        "startblock": "16550000",
+        "endblock": "116555563",
+        "page": "1",
+        "offset": "1",
+        "sort": "asc"
+      }
+    },
+    "get_erc20_token_transfer_events_by_address": {
+      "module": "rpc_accounts",
+      "action": "tokentx",
+      "kwargs": { 
+        "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd",
+        "page": "1",
+        "offset": "1",
+        "sort": "asc"
+      }
+    },     
+    "get_erc721_token_transfer_events_by_address": {
+      "module": "rpc_accounts",
+      "action": "tokennfttx",
+      "kwargs": { 
+        "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd",
+        "page": "1",
+        "offset": "1",
+        "sort": "asc"
+      }
+    },       
+    "get_erc20_balance_by_contract_address": {
+      "module": "rpc_accounts",
+      "action": "tokenbalance",
+      "kwargs": { 
+        "contractaddress": "0x381E0bD1FE2e90707fA0e72880d8756f73e11084",
+        "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"
+      }
+    },       
+    "get_erc20_tokens_by_address": {
+      "module": "rpc_accounts",
+      "action": "tokenlist",
+      "kwargs": { 
+        "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"
+      }
+    },  
+    "get_account_list_balances": {
+      "module": "rpc_accounts",
+      "action": "tokenlist",
+      "kwargs": { 
+        "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"
+      }
+    },      
+    "get_block_reward_by_block_number": {
+      "module": "rpc_blocks",
+      "action": "getblockreward",
+      "kwargs": { 
+        "blockno": "1000000"
+      }
+    },
+    "get_est_block_countdown_time_by_block_number": {
+      "module": "rpc_blocks",
+      "action": "getblockreward",
+      "kwargs": { 
+        "blockno": "1000000"
+      }
+    },
+    "get_total_token_supply": {
+      "module": "rpc_stats",
+      "action": "tokensupply",
+      "kwargs": {
+        "contractaddress": "0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c"
+      }
+    },    
+    "get_total_eth_supply": {
+      "module": "rpc_stats",
+      "action": "ethsupply",
+      "kwargs": {
+        "contractaddress": "0x3390108E913824B8eaD638444cc52B9aBdF63798"
+      }
+    },
+    "get_total_coin_supply": {
+      "module": "rpc_stats",
+      "action": "coinsupply",
+      "kwargs": {
+        "contractaddress": "0x3390108E913824B8eaD638444cc52B9aBdF63798"
+      }
+    },
+    "get_eth_price": {
+      "module": "rpc_stats",
+      "action": "ethprice",
+      "kwargs": {
+        "contractaddress": "0x3390108E913824B8eaD638444cc52B9aBdF63798"
+      }
+    },
+    "get_coin_price": {
+      "module": "rpc_stats",
+      "action": "coinprice",
+      "kwargs": {
+        "contractaddress": "0x3390108E913824B8eaD638444cc52B9aBdF63798"
+      }   
+    },
+    "get_total_supply_by_contract_address": {
+      "module": "rpc_tokens",
+      "action": "getToken",
+      "kwargs": {
+        "contractaddress": "0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c"
+      }  
+    },
+    "get_total_holders_by_contract_address": {
+      "module": "rpc_tokens",
+      "action": "getTokenHolders",
+      "kwargs": {
+        "contractaddress": "0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c",
+        "page": "1",
+        "offset": "1"  
+      }    
+    },
+    "get_tx_info": {
+      "module": "rpc_transactions",
+      "action": "gettxinfo",
+      "kwargs": {
+        "txhash": "0x222f3afef2e0acdea4202a61ab93ff6f23ac26fc4ea26f119c9af2641a02c15f" 
+      }    
+    },
+    "get_tx_receipt_status": {
+      "module": "rpc_transactions",
+      "action": "gettxinfo",
+      "kwargs": {
+        "txhash": "0x222f3afef2e0acdea4202a61ab93ff6f23ac26fc4ea26f119c9af2641a02c15f" 
+      }      
+    },
+    "get_status": {
+      "module": "rpc_transactions",
+      "action": "getstatus",
+      "kwargs": {
+        "txhash": "0x222f3afef2e0acdea4202a61ab93ff6f23ac26fc4ea26f119c9af2641a02c15f"   
+      }    
+    },
+    "get_contract_list": {
+      "module": "rpc_contracts",
+      "action": "listcontracts"    
+    },
+    "get_contract_abi": {
+      "module": "rpc_contracts",
+      "action": "getabi",
+      "kwargs": {
+        "address": "0x4200000000000000000000000000000000000011" 
+      }      
+    },
+    "get_source_code": {
+      "module": "rpc_contracts",
+      "action": "getsourcecode",
+      "kwargs": {
+        "address": "0xc1539b7084a9f793cbeada7382443dcdbc4d9add"  
+      }   
+    },
+    "get_contract_creation": {
+      "module": "rpc_contracts",
+      "action": "getcontractcreation",
+      "kwargs": {
+        "contractaddresses": [
+          "0xc1539b7084a9f793cbeada7382443dcdbc4d9add"
+        ]
+      }
+    }                                                                              
+}
