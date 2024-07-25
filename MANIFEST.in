@@ -1,3 +1,10 @@
-include python/prod/configs/MAIN-RPC-stable.json
 include python/prod/configs/ROLLUX-RPC-stable.json
 include python/prod/configs/ROLLUX-REST-stable.json
+include python/prod/configs/ETH-RPC-stable.json
+include python/prod/configs/ETH-REST-stable.json
+include python/prod/configs/ARB-RPC-stable.json
+include python/prod/configs/ARB-REST-stable.json
+include python/prod/configs/OP-RPC-stable.json
+include python/prod/configs/OP-REST-stable.json
+include python/prod/configs/MATIC-RPC-stable.json
+include python/prod/configs/MATIC-REST-stable.json

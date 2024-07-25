@@ -1,0 +1,170 @@
+{
+    "get_addresses": {
+        "module": "rest_accounts",
+        "kwargs": {}
+    },
+    "get_address_info": {
+        "module": "rest_accounts",
+        "kwargs": {
+            "address": "0xBb8b9456F615545c88528653024E87C6069d1598"         
+          }
+    },
+    "get_address_counters": {
+        "module": "rest_accounts",
+        "kwargs": {
+            "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"         
+          }
+    },
+    "get_address_transactions": {
+        "module": "rest_accounts",
+        "kwargs": {
+            "address": "0xBb8b9456F615545c88528653024E87C6069d1598"         
+          }
+    },
+    "get_address_logs": {
+        "module": "rest_accounts",
+        "kwargs": {
+            "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"         
+          }
+    },
+    "get_blocks_validated": {
+        "module": "rest_accounts",
+        "kwargs": {
+            "address": "0x4200000000000000000000000000000000000011"         
+          }
+    },   
+    "get_token_balances": {
+        "module": "rest_accounts",
+        "kwargs": {
+            "address": "0x4200000000000000000000000000000000000011"         
+          }
+    },
+    "get_token_balances_with_filtering": {
+        "module": "rest_accounts",
+        "kwargs": {
+            "address": "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"         
+          }
+    },
+    "get_coin_balance_history": {
+        "module": "rest_accounts",
+        "kwargs": {
+            "address": "0x4200000000000000000000000000000000000006"         
+          }
+    },
+    "get_coin_balance_history_by_day": {
+        "module": "rest_accounts",
+        "kwargs": {
+            "address": "0x4200000000000000000000000000000000000006"         
+          }
+    },                 
+    "get_tokens_list": {
+        "module": "rest_tokens",
+        "kwargs": {
+            "token_name": "USDT"         
+          }
+    },
+    "get_token_info": {
+        "module": "rest_tokens",
+        "kwargs": {
+            "address": "USDT"         
+          }
+    },         
+    "get_token_transfers": {
+        "module": "rest_tokens",
+        "kwargs": {
+            "address": "0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c"         
+          }
+    },
+    "get_token_holders": {
+        "module": "rest_tokens",
+        "kwargs": {
+            "address": "0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c"         
+          }
+    },
+    "get_token_counters": {
+        "module": "rest_tokens",
+        "kwargs": {
+            "address": "0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c"         
+          }
+    },   
+    "get_smart_contracts": {
+        "module": "rest_contracts",
+        "kwargs": {
+            "contract_type": "proxy"         
+          }
+    },
+    "get_smart_contract_counters": {
+        "module": "rest_contracts",
+        "kwargs": {}
+    },
+    "get_smart_contract": {
+        "module": "rest_contracts",
+        "kwargs": {
+            "address": "0x420000000000000000000000000000000000001A"         
+          }
+    },
+    "get_block_info": {
+        "module": "rest_blocks",
+        "kwargs": {
+            "block_number": "16668506"         
+          }
+    },
+    "get_block_transactions": {
+        "module": "rest_blocks",
+        "kwargs": {
+            "block_number": "16668506"         
+          }
+    },
+    "get_block_withdrawals": {
+        "module": "rest_blocks",
+        "kwargs": {
+            "block_number": "16668506"         
+          }
+    },
+    "get_main_page_blocks": {
+        "module": "rest_blocks",
+        "kwargs": {}
+    },    
+    "get_state_changes": {
+        "module": "rest_transactions",
+        "kwargs": {
+            "tx_hash": "0x8d3a232721f4442bcb369909f71c9bf313a1511d4dbc58d2bf61a36cdbc969dc"         
+          }
+    },
+    "get_transaction_logs": {
+        "module": "rest_transactions",
+        "kwargs": {
+            "tx_hash": "0x8d3a232721f4442bcb369909f71c9bf313a1511d4dbc58d2bf61a36cdbc969dc"         
+          }
+    },
+    "get_internal_transactions": {
+        "module": "rest_transactions",
+        "kwargs": {
+            "tx_hash": "0x8d3a232721f4442bcb369909f71c9bf313a1511d4dbc58d2bf61a36cdbc969dc"         
+          }
+    },
+    "get_token_hash_transfers": {
+        "module": "rest_transactions",
+        "kwargs": {
+            "tx_hash": "0x8d3a232721f4442bcb369909f71c9bf313a1511d4dbc58d2bf61a36cdbc969dc"         
+          }
+    },
+    "get_transaction_info": {
+        "module": "rest_transactions",
+        "kwargs": {
+            "tx_hash": "0xa4aecf951731a6a3f470b72184eed54a9dabe204f5bd0ce4a12a4c259e13de6b"         
+          }
+    },
+    "get_main_page_transactions": {
+        "module": "rest_transactions",
+        "kwargs": {}
+    },
+    "get_stats_transactions_chart": {
+        "module": "rest_stats",
+        "kwargs": {}
+    },
+    "get_stats_counters": {
+        "module": "rest_stats",
+        "kwargs": {}
+    }                                                                         
+}    
