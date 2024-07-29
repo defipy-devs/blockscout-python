@@ -20,6 +20,6 @@ class DataDict:
             dict_transfers_reindex[k] = self.__data_dict[old_k]
         self.__data_dict = dict_transfers_reindex
 
-    def to_dataframe(self, dict_transfers):
-        return pd.DataFrame.from_dict(dict_transfers, orient='index') 
+    def to_dataframe(self):
+        return pd.DataFrame.from_dict(self.__data_dict, orient='index') 
 
